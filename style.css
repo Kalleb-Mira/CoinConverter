@@ -1,0 +1,156 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
+
+     font-style: normal;
+     line-height: 1.8rem;
+     font-weight: normal;
+ }
+
+ :root {
+     font-size: 62.5%;
+ }
+
+ body {
+     background-color: #E5E5E5;
+     font-size: 1.6rem;
+ }
+
+ .container {
+     background-color: #F4F4F4;
+     width: 37.5rem;
+     margin: 0 auto;
+     margin-top: 6.0rem;
+     margin-bottom: 6.0rem;
+
+     border-radius: 0.5rem 0.5rem 0 0
+ }
+
+ header {
+     background-color: #1B83E2;
+     height: 6.6rem;
+     border-radius: 0.5rem 0.5rem 0 0
+ }
+
+ header h1 {
+     font-size: 2.4rem;
+
+     color: #F4F4F4;
+     text-align: center;
+     padding-top: 2.4rem;
+ }
+
+ main {
+     padding: 2.4rem;
+
+ }
+
+
+ label {
+     font-size: 1.4rem;
+     color: #777777;
+
+ }
+
+ b {
+     font-weight: bold;
+ }
+
+ label select {
+     width: 32.7rem;
+     height: 4.8rem;
+
+     background: #FFFFFF;
+     border: 1px solid #BBBBBB;
+     box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+     border-radius: 0.4rem;
+     margin-bottom: 2.4rem;
+     margin-top: 0.6rem;
+     padding-left: 1.6rem;
+
+     outline: none;
+     appearance: none;
+     cursor: pointer;
+     color: #555555;
+ }
+
+ #input {
+     width: 32.7rem;
+     height: 4.8rem;
+
+
+     background: #FFFFFF;
+     border: 1px solid #BBBBBB;
+     box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+     border-radius: 0.4rem;
+     padding-left: 1.6rem;
+     font-weight: 700;
+
+     cursor: pointer;
+     outline: none;
+     appearance: none;
+ }
+
+ ::placeholder {
+     opacity: 0.6;
+     font-weight: 500;
+ }
+
+
+
+ button {
+     width: 32.7rem;
+     height: 4.8rem;
+     margin-top: 2.4rem;
+     margin-bottom: 3.6rem;
+
+     font-weight: 700;
+     font-size: 1.6rem;
+
+
+     color: #F4F4F4;
+     background: #1B83E2;
+     border-radius: 2.5rem;
+     border-style: none;
+     cursor: pointer;
+ }
+
+ button:hover {
+     opacity: 0.9;
+ }
+
+ section {
+     text-align: center;
+     padding: 1.0rem;
+     border: 1px solid #1B83E2;
+     border-radius: 4px;
+ }
+
+ .paragrafo {
+     color: #777777;
+     font-size: 1.4rem;
+ }
+
+ .paragrafo-valor {
+     color: #1B83E2;
+     font-weight: 700;
+ }
+
+ #arrow {
+     margin: 15px 0;
+
+ }
+
+
+ .anima {
+     animation: arrow 0.5s;
+
+ }
+
+ @keyframes arrow {
+     50% {
+         transform: translateY(15%);
+     }
+ }
