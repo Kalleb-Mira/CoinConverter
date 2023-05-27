@@ -2,42 +2,56 @@ const button = document.getElementById('button-converter');
 const select = document.getElementById('select-value');
 const arrow = document.getElementById('arrow')
 
-const dolar = 5.2
-const euro = 5.5
-const bitcoin = 141.333
 
 
-const convertValue = () => {
-  const inputConvert = document.getElementById('input').value
+
+const convertValue = async () => {
+const inputConvert = document.getElementById('input').value;
+const cleanedValue = inputConvert.replace(/[^0-9]/g, '')
+const inputValue = parseFloat(cleanedValue);
+
   const realValue = document.getElementById('real-valor-text')
+  
   const valueConvert = document.getElementById('convertido-value')
+
+  
+  
+  const data = await fetch ("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then( response => response.json())
+
+  const dolar = data.USDBRL.high
+  const euro = data.EURBRL.high
+  const bitcoin = data.BTCBRL.high
+
+  
 
   realValue.innerHTML = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
-    currency: 'BRL'
-  }).format(inputConvert);
+    currency: 'BRL',
+    minimumFractionDigits: 3
+  }).format(inputValue);
 
 
   if (select.value === 'US$ Dólar Americano') {
     valueConvert.innerHTML = new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD'
-    }).format(inputConvert / dolar);
+      currency: 'USD',
+      maximumFractionDigits: 2
+    }).format(inputValue / dolar);
   }
 
   if (select.value === '€ Euro') {
     valueConvert.innerHTML = new Intl.NumberFormat('de-DE', {
       style: 'currency',
       currency: 'EUR'
-    }).format(inputConvert / euro);
+    }).format(inputValue / euro);
   }
 
   if (select.value === 'Bitcoin') {
     valueConvert.innerHTML = new Intl.NumberFormat('de-DE', {
       style: 'currency',
       currency: 'BTC',
-      minimumFractionDigits: 8
-    }).format(inputConvert / bitcoin);
+      maximumFractionDigits: 2
+    }).format(inputValue / bitcoin);
   }
 
   
